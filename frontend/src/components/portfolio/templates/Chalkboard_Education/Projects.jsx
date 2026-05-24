@@ -164,7 +164,7 @@ function SectionHeader() {
           margin: 0,
         }}
       >
-        4 projects · All grades A or above
+       {projects.length} projects · All grades A or above
       </p>
     </div>
   );
