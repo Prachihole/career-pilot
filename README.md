@@ -168,9 +168,23 @@ We solve the modern job seeker's most painful challenges:
 ### Prerequisites
 - Node.js 18.0+
 - MongoDB instance (local or Atlas)
-- Redis instance (for job queue)
+- Redis instance (local or remote)
+- ⚠️ BullMQ queues require Redis to be running before starting the backend server
 - Firebase project with Firestore enabled
 - Google Gemini API key
+
+### Environment Variables
+
+Create appropriate `.env` files for both backend and frontend before running the application.
+
+Make sure to configure required services such as:
+- Firebase
+- MongoDB
+- Redis
+- Gemini API
+- Razorpay
+
+Refer to the project configuration files for required environment variable names.
 
 ### Quick Installation
 
@@ -190,12 +204,30 @@ npm install
 
 Start the development servers:
 ```bash
-# Backend (Port 5001)
+# Terminal 1 — Backend
+cd backend
 npm run dev
 
-# Frontend (Port 5173)
+# Terminal 2 — Frontend
+cd frontend
 npm run dev
 ```
+
+After starting both servers:
+
+- Frontend runs on: `http://localhost:5173`
+- Backend runs on: `http://localhost:5001`
+
+---
+
+### Verify Installation
+
+After starting both frontend and backend servers:
+
+- Open `http://localhost:5173`
+- Verify the frontend loads successfully
+- Check backend logs for database/API connection errors
+- Ensure Firebase and MongoDB connections initialize correctly
 
 ---
 
@@ -291,7 +323,16 @@ For complete documentation, see the [API Reference Guide](./API_DOCS/README.md).
 
 ### Port Already in Use (`EADDRINUSE`)
 - Change the `PORT` value in `.env`
-- Stop other Node instances: `killall node` (Mac/Linux)
+
+#### Mac/Linux
+```bash
+killall node
+```
+
+#### Windows
+```powershell
+taskkill /F /IM node.exe
+```
 </details>
 
 ---
