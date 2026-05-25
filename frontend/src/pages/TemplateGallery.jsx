@@ -292,7 +292,7 @@ export default function TemplateGallery() {
   });
 
   return (
-    <div className="min-h-screen bg-background text-foreground p-8 pt-24 transition-colors duration-300">
+    <><div className="min-h-screen bg-background text-foreground p-8 pt-24 transition-colors duration-300">
       <Navbar />
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-bold">Template Gallery</h1>
@@ -354,8 +354,7 @@ export default function TemplateGallery() {
               onUse={(title) => {
                 setSelectedPortfolioTitle(title);
                 setIsDeployModalOpen(true);
-              }}
-            />
+              } } />
           ))}
         </div>
       )}
@@ -364,8 +363,7 @@ export default function TemplateGallery() {
       <DeployModal
         isOpen={isDeployModalOpen}
         onClose={() => setIsDeployModalOpen(false)}
-        portfolioTitle={selectedPortfolioTitle}
-      />
+        portfolioTitle={selectedPortfolioTitle} />
 
 
       <div className="mt-12">
@@ -381,6 +379,17 @@ export default function TemplateGallery() {
       </div>
 
       <div className="mt-12">
+        <div className="mb-4 flex items-center gap-3 px-1">
+          <span className="rounded-full bg-amber-500/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-amber-400 border border-amber-500/30">
+            Preview
+          </span>
+          <h2 className="text-lg font-semibold text-foreground/70">Geometric Shapes Theme — About Section</h2>
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-border">
+          <GeometricShapesAbout />
+        </div>
+      </div>
+    </div><div className="mt-12">
         <div className="mb-4 flex items-center gap-3 px-1">
           <span className="rounded-full bg-amber-500/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-amber-400 border border-amber-500/30">
             Preview
@@ -406,3 +415,4 @@ export default function TemplateGallery() {
     </div>
   );
 }
+
