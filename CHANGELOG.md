@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/anurag3407/career-pilot/compare/v1.19.0...v1.20.0) (2026-05-26)
+
+
+### Features
+
+* **github:** improve productive hours visualization UX ([ce1ae40](https://github.com/anurag3407/career-pilot/commit/ce1ae40fc9a908ca39e9b2738bc0d657ccf40789))
+
 # [1.19.0](https://github.com/anurag3407/career-pilot/compare/v1.18.0...v1.19.0) (2026-05-26)
 
 
