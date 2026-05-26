@@ -1,3 +1,10 @@
+# [1.31.0](https://github.com/anurag3407/career-pilot/compare/v1.30.0...v1.31.0) (2026-05-26)
+
+
+### Features
+
+* **portfolio:** implement Fantasy RPG Projects template section ([cadbca9](https://github.com/anurag3407/career-pilot/commit/cadbca914a84166090307fa6adf8394ba14a14f9))
+
 # [1.30.0](https://github.com/anurag3407/career-pilot/compare/v1.29.0...v1.30.0) (2026-05-26)
 
 
