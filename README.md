@@ -240,6 +240,8 @@ Before running the project locally, make sure you have:
 
 ### 1. Clone the Repository
 
+Firstly, clone the repository by clicking green button at GitHub and getting the link or by doing the following in Terminal
+
 ```bash
 git clone https://github.com/anurag3407/career-pilot.git
 cd career-pilot
@@ -249,6 +251,8 @@ cd career-pilot
 
 ### 2. Install Backend Dependencies
 
+Now, In order to install backend dependencies, run the commands written below
+
 ```bash
 cd backend
 npm install
@@ -257,6 +261,8 @@ npm install
 ---
 
 ### 3. Install Frontend Dependencies
+
+For frontend, navigate to frontend and run npm install
 
 ```bash
 cd ../frontend
