@@ -80,4 +80,25 @@ describe('JobSearch page', () => {
     // Verify it changed back to 'All Types'
     expect(jobTypeSelect.value).toBe('All Types')
   })
+
+  test('renders API-provided match score badge on job cards', async () => {
+    jobsApi.search.mockResolvedValue({
+      data: [{ id: '1', title: 'Frontend Developer', company: 'Test Company', matchScore: 82 }]
+    })
+
+    render(
+      <MemoryRouter>
+        <JobSearch />
+      </MemoryRouter>
+    )
+
+    fireEvent.change(screen.getByPlaceholderText(/Job title, keywords, or company.../i), {
+      target: { value: 'frontend' }
+    })
+    fireEvent.click(screen.getByRole('button', { name: /^Search$/i }))
+
+    expect(await screen.findByText('82%')).toBeInTheDocument()
+    expect(screen.getByText('Strong Match')).toBeInTheDocument()
+    expect(screen.getByTitle('Based on your resume')).toBeInTheDocument()
+  })
 })
