@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import WaveDistortionPortfolio from "../components/portfolio/templates/Wave_Distortion/index.jsx";
 
 import DeployModal from "../components/portfolio/DeployModal";
 import ThemeSelector from "../components/portfolio/ThemeSelector";
