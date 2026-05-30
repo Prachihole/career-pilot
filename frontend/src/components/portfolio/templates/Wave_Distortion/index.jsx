@@ -578,15 +578,17 @@ export default function WaveDistortionPortfolio({ preview = false }) {
     >
       <DistortionFilter />
 
-      {/* ── Scroll Progress Bar ── */}
-      <motion.div
-        style={{
-          position: "fixed", top: 0, left: 0, height: "3px", zIndex: 1000,
-          background: `linear-gradient(90deg, #0070f3, ${CYAN})`,
-          boxShadow: `0 0 12px rgba(0,200,255,0.8)`,
-          scaleX: scrollYProgress, transformOrigin: "0%",
-        }}
-      />
+     // ✅ Hide it in preview mode
+      {!preview && (
+        <motion.div
+          style={{
+             position: "fixed", top: 0, left: 0, height: "3px", zIndex: 1000,
+             background: `linear-gradient(90deg, #0070f3, ${CYAN})`,
+             boxShadow: `0 0 12px rgba(0,200,255,0.8)`,
+             scaleX: scrollYProgress, transformOrigin: "0%",
+       }}
+  />
+)}
 
       {/* ══════════ NAV ══════════ */}
       {!preview && (
@@ -824,7 +826,7 @@ export default function WaveDistortionPortfolio({ preview = false }) {
             className="flex gap-4 justify-center flex-wrap mb-10"
           >
             <motion.button
-              onClick={() => scrollTo("Projects")}
+              onClick={() => { if (!preview) scrollTo("Projects"); }}
               whileHover={{ scale: 1.05, boxShadow: "0 0 36px rgba(0,200,255,0.52)" }}
               whileTap={{ scale: 0.96 }}
               className="px-8 py-3.5 rounded-full text-sm font-bold cursor-pointer border-none"
@@ -833,7 +835,7 @@ export default function WaveDistortionPortfolio({ preview = false }) {
               View Projects
             </motion.button>
             <motion.button
-              onClick={() => scrollTo("Contact")}
+              onClick={() => { if (!preview) scrollTo("Contact"); }}
               whileHover={{ scale: 1.05, background: "rgba(0,200,255,0.14)" }}
               whileTap={{ scale: 0.96 }}
               className="px-8 py-3.5 rounded-full text-sm font-bold cursor-pointer"
@@ -886,7 +888,7 @@ export default function WaveDistortionPortfolio({ preview = false }) {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2.2, repeat: Infinity }}
-          onClick={() => scrollTo("About")}
+          onClick={() => { if (!preview) scrollTo("About"); }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer z-10"
           style={{ color: "rgba(0,200,255,0.45)" }}
         >
