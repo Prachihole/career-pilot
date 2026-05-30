@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { Github, Linkedin, Twitter, Mail, ExternalLink, MapPin, Download, Star, Briefcase, User, Code2, MessageSquare, Phone, Globe } from "lucide-react";
+import data from "../../../../data/dummy_data.json";
 
 
 // Section imports
