@@ -325,7 +325,7 @@ const [hoveredCard, setHoveredCard] = useState(null);
   ];
 
   const templates = [
-    { id: "Minimal", title: "Minimal", description: "Clean and minimal portfolio template", category: "Portfolio", colorScheme: "Light", layout: "Minimal", isComplete: true, isPremium: false, darkMode: true, views: 1200, rating: 4.5, createdAt: "2024-01-01" },
+    { id: "Minimalist_White", title: "Minimal", description: "Clean and minimal portfolio template", category: "Portfolio", colorScheme: "Light", layout: "Minimal", isComplete: true, isPremium: false, darkMode: true, views: 1200, rating: 4.5, createdAt: "2024-01-01" },
     { id: "Swiss_Typography", title: "Swiss Typography", description: "Bold typographic portfolio template", category: "Portfolio", colorScheme: "Light", layout: "Grid", isComplete: true, isPremium: false, darkMode: false, views: 980, rating: 4.3, createdAt: "2024-02-01" },
     { id: "Liquid_Glass", title: "Liquid Glass", description: "Glassmorphism portfolio template", category: "Portfolio", colorScheme: "Dark", layout: "Cards", isComplete: true, isPremium: true, darkMode: true, views: 850, rating: 4.7, createdAt: "2024-03-01" },
     { id: "Wave_Distortion", title: "Wave Distortion", description: "Ocean-wave-inspired fluid motion portfolio", category: "Portfolio", colorScheme: "Dark", layout: "Interactive", isComplete: true, isPremium: false, darkMode: true, views: 760, rating: 4.6, createdAt: "2024-04-01" },
