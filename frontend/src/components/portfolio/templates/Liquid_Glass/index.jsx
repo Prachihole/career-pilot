@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, ExternalLink, MapPin, Download, Star, Briefcase, User, Code2, MessageSquare, Phone, Globe } from "lucide-react";
-import data from "../../../../data/dummy_data.json";
-=======
-import React from 'react';
-import dummyData from '../../../../data/dummy_data.json';
->>>>>>> origin/main
+
 
 // Section imports
 import Hero from './Hero';
